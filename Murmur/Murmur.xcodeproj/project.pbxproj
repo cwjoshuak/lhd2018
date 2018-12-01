@@ -15,6 +15,7 @@
 		D4E5486A21B32056001819C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E5486821B32056001819C4 /* LaunchScreen.storyboard */; };
 		D4E5487621B3213A001819C4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5487521B3213A001819C4 /* TableViewController.swift */; };
 		D4E5487821B3217C001819C4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5487721B3217C001819C4 /* TableViewCell.swift */; };
+		D4E5487A21B33B84001819C4 /* PostViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5487921B33B84001819C4 /* PostViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D4E5486B21B32056001819C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4E5487521B3213A001819C4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D4E5487721B3217C001819C4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D4E5487921B33B84001819C4 /* PostViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				B205214921B33B9500781268 /* Post.swift */,
 				D4E5485F21B32056001819C4 /* AppDelegate.swift */,
 				D4E5486321B32056001819C4 /* Main.storyboard */,
+				D4E5487921B33B84001819C4 /* PostViewViewController.swift */,
 				D4E5487721B3217C001819C4 /* TableViewCell.swift */,
 				D4E5486621B32056001819C4 /* Assets.xcassets */,
 				D4E5486821B32056001819C4 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 				D4E5487621B3213A001819C4 /* TableViewController.swift in Sources */,
 				D4E5486021B32056001819C4 /* AppDelegate.swift in Sources */,
 				B205214A21B33B9500781268 /* Post.swift in Sources */,
+				D4E5487A21B33B84001819C4 /* PostViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
