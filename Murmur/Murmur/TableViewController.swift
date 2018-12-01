@@ -9,9 +9,11 @@
 import UIKit
 import Alamofire
 
+let baseURL = "http://104.210.50.150:5000/"
+
 class TableViewController: UITableViewController {
 
-    let baseURL = "http://104.210.50.150:5000/"
+    
     var posts = [Post]()
     
     override func viewDidLoad() {
@@ -22,7 +24,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        //refreshposts(<#T##sender: UIBarButtonItem##UIBarButtonItem#>)
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,15 +53,12 @@ class TableViewController: UITableViewController {
         cell.cellDesc.text = posts[indexPath.row].text
         cell.votes.text = "12"
         
-        cell.upvotebutton.setImage(UIImage(named: "updoot"), for: .selected)
-        cell.downvotebutton.setImage(UIImage(named: "downvote2"), for: .selected)
+        cell.upvotebutton.setImage(UIImage(named: "selectedupvote"), for: .selected)
+        cell.downvotebutton.setImage(UIImage(named: "selecteddownvote"), for: .selected)
         return cell
     }
     
-   
-
-    
-    @IBAction func refreshposts(_ sender: UIBarButtonItem) {
+    func refresh() {
         Alamofire.request("\(baseURL)getAll").responseJSON { response in
             
             if let json = response.result.value as? NSArray {
@@ -74,6 +73,9 @@ class TableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    @IBAction func refreshposts(_ sender: UIBarButtonItem) {
+        refresh()
     }
 
     /*

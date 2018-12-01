@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class PostViewViewController: UIViewController {
 
     @IBOutlet var posttitle: UITextField!
@@ -27,6 +27,15 @@ class PostViewViewController: UIViewController {
     }
     
     @IBAction func postbutton(_ sender: UIBarButtonItem) {
+        let baseURL = "http://104.210.50.150:5000/"
+        
+        let parameters: Parameters = [
+            "title": posttitle.text!,
+            "text": postdesc.text!,
+            "user": "user"
+        ]
+        
+        Alamofire.request("\(baseURL)create", method: .post, parameters: parameters)
     }
 
     /*
