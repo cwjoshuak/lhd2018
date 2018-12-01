@@ -52,8 +52,6 @@ class TableViewController: UITableViewController {
     }
     
    
-    @IBAction func addpost(_ sender: UIBarButtonItem) {
-    }
     
     @IBAction func refreshposts(_ sender: UIBarButtonItem) {
     }
