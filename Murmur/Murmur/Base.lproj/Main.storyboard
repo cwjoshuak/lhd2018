@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="40J-u3-0Si">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MurMur-->
+        <scene sceneID="wdv-xH-3GA">
+            <objects>
+                <tableViewController id="32W-Ei-8tn" customClass="TableViewController" customModule="Murmur" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="28" sectionFooterHeight="28" id="t1E-Yg-K62">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="145" id="exX-so-aae" customClass="TableViewCell" customModule="Murmur" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exX-so-aae" id="2MN-ea-deg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-4Z-UiC">
+                                            <rect key="frame" x="8" y="8" width="158" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q58-Xw-Nfb">
+                                            <rect key="frame" x="8" y="39" width="278" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq7-Ck-EsB">
+                                            <rect key="frame" x="8" y="100" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="unchecked"/>
+                                            <connections>
+                                                <action selector="upvotepress:" destination="exX-so-aae" eventType="touchUpInside" id="bQa-WU-0DX"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1N-Qd-BBY">
+                                            <rect key="frame" x="47" y="106" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3V-hQ-s6I">
+                                            <rect key="frame" x="91" y="100" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="downvote1"/>
+                                            <connections>
+                                                <action selector="downvotepress:" destination="exX-so-aae" eventType="touchUpInside" id="q0Y-LH-IkJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellDesc" destination="Q58-Xw-Nfb" id="lID-TD-4zH"/>
+                                    <outlet property="cellTitle" destination="2eF-4Z-UiC" id="Qpv-Dw-lGe"/>
+                                    <outlet property="downvotebutton" destination="s3V-hQ-s6I" id="bb6-gs-DWm"/>
+                                    <outlet property="upvotebutton" destination="pq7-Ck-EsB" id="7lQ-mk-0OM"/>
+                                    <outlet property="votes" destination="e1N-Qd-BBY" id="clo-n3-64Z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="32W-Ei-8tn" id="PT6-iB-ezq"/>
+                            <outlet property="delegate" destination="32W-Ei-8tn" id="0QL-ix-MWp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MurMur" id="sFs-IP-kaI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="o9B-DT-iQT">
+                            <connections>
+                                <action selector="refreshposts:" destination="32W-Ei-8tn" id="2Hv-8m-clK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EcX-fe-GM0">
+                            <connections>
+                                <action selector="addpost:" destination="32W-Ei-8tn" id="n3g-VM-jmH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQX-BF-vJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="755.17241379310349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bAX-lS-Twc">
+            <objects>
+                <navigationController id="40J-u3-0Si" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W6W-ro-0cA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="32W-Ei-8tn" kind="relationship" relationship="rootViewController" id="eHh-ag-zx6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDF-OC-K3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="756"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="downvote1" width="219" height="231"/>
+        <image name="unchecked" width="332" height="328"/>
+    </resources>
+</document>

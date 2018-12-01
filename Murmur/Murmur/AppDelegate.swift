@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TrashZocator
+//  Murmur
 //
-//  Created by Joshua Kuan on 12/1/18.
-//  Copyright © 2018 Joshua Kuan. All rights reserved.
+//  Created by Garry Fanata on 12/1/18.
+//  Copyright © 2018 Garry Fanata. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
