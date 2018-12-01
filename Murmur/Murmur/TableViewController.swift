@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class TableViewController: UITableViewController {
 
+    let baseURL = "http://104.210.50.150:5000/"
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +22,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //refreshposts(<#T##sender: UIBarButtonItem##UIBarButtonItem#>)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +39,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return posts.count
     }
 
     
@@ -42,8 +47,8 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
-        cell.cellTitle.text = "Title"
-        cell.cellDesc.text = "Description"
+        cell.cellTitle.text = posts[indexPath.row].title
+        cell.cellDesc.text = posts[indexPath.row].text
         cell.votes.text = "12"
         
         cell.upvotebutton.setImage(UIImage(named: "updoot"), for: .selected)
@@ -53,9 +58,36 @@ class TableViewController: UITableViewController {
     
    
     @IBAction func addpost(_ sender: UIBarButtonItem) {
+        Alamofire.request("\(baseURL)").responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
     }
     
     @IBAction func refreshposts(_ sender: UIBarButtonItem) {
+        Alamofire.request("\(baseURL)getAll").responseJSON { response in
+            
+            if let json = response.result.value as? NSArray {
+                self.posts.removeAll()
+                for entry in json {
+                    let entry = entry as! NSDictionary
+                    
+                    let post = Post(title: entry.value(forKey: "title") as! String, text: entry.value(forKey: "text") as! String, user: entry.value(forKey: "user") as! String, time: entry.value(forKey: "time") as! String)
+                    
+                    self.posts.append(post)
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
 
     /*

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7014DE457C9F080DF88557 /* Pods_Murmur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367B88651CA386A570014F59 /* Pods_Murmur.framework */; };
+		B205214A21B33B9500781268 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205214921B33B9500781268 /* Post.swift */; };
 		D4E5486021B32056001819C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5485F21B32056001819C4 /* AppDelegate.swift */; };
 		D4E5486521B32056001819C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E5486321B32056001819C4 /* Main.storyboard */; };
 		D4E5486721B32056001819C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E5486621B32056001819C4 /* Assets.xcassets */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Murmur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Murmur/Pods-Murmur.release.xcconfig"; sourceTree = "<group>"; };
+		367B88651CA386A570014F59 /* Pods_Murmur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Murmur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Murmur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Murmur/Pods-Murmur.debug.xcconfig"; sourceTree = "<group>"; };
+		B205214921B33B9500781268 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D4E5485C21B32056001819C4 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5485F21B32056001819C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E5486421B32056001819C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7014DE457C9F080DF88557 /* Pods_Murmur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7358565FFCA8C2E65C008BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				367B88651CA386A570014F59 /* Pods_Murmur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4E5485321B32056001819C4 = {
 			isa = PBXGroup;
 			children = (
 				D4E5485E21B32056001819C4 /* Murmur */,
 				D4E5485D21B32056001819C4 /* Products */,
+				E35E874E82B433F53E15E9AA /* Pods */,
+				A7358565FFCA8C2E65C008BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E5487521B3213A001819C4 /* TableViewController.swift */,
+				B205214921B33B9500781268 /* Post.swift */,
 				D4E5485F21B32056001819C4 /* AppDelegate.swift */,
 				D4E5486321B32056001819C4 /* Main.storyboard */,
 				D4E5487721B3217C001819C4 /* TableViewCell.swift */,
@@ -67,6 +85,15 @@
 			path = Murmur;
 			sourceTree = "<group>";
 		};
+		E35E874E82B433F53E15E9AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */,
+				06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E5486E21B32056001819C4 /* Build configuration list for PBXNativeTarget "Murmur" */;
 			buildPhases = (
+				E755B3420F002E275FD5CEE0 /* [CP] Check Pods Manifest.lock */,
 				D4E5485821B32056001819C4 /* Sources */,
 				D4E5485921B32056001819C4 /* Frameworks */,
 				D4E5485A21B32056001819C4 /* Resources */,
+				8B087FF0B9CB20F08D247FB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -94,12 +123,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Garry Fanata";
 				TargetAttributes = {
 					D4E5485B21B32056001819C4 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = Q62B8UULH4;
+						DevelopmentTeam = YN83627A85;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,6 +165,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B087FF0B9CB20F08D247FB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Murmur/Pods-Murmur-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Murmur/Pods-Murmur-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E755B3420F002E275FD5CEE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Murmur-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4E5485821B32056001819C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +212,7 @@
 				D4E5487821B3217C001819C4 /* TableViewCell.swift in Sources */,
 				D4E5487621B3213A001819C4 /* TableViewController.swift in Sources */,
 				D4E5486021B32056001819C4 /* AppDelegate.swift in Sources */,
+				B205214A21B33B9500781268 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,15 +248,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -228,15 +306,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -263,27 +349,31 @@
 		};
 		D4E5486F21B32056001819C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q62B8UULH4;
+				DEVELOPMENT_TEAM = YN83627A85;
 				INFOPLIST_FILE = Murmur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fanata.Murmur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwjoshuak.Murmur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		D4E5487021B32056001819C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q62B8UULH4;
+				DEVELOPMENT_TEAM = YN83627A85;
 				INFOPLIST_FILE = Murmur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Fanata.Murmur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwjoshuak.Murmur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -306,6 +396,7 @@
 				D4E5487021B32056001819C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
