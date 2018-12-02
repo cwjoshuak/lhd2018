@@ -4,4 +4,7 @@ use_frameworks!
 
 target 'Murmur' do
     pod 'Alamofire', '~> 4.7'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 end

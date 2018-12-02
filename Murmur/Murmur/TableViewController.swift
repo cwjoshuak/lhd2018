@@ -51,8 +51,16 @@ class TableViewController: UITableViewController {
         // Configure the cell...
         cell.cellTitle.text = posts[indexPath.row].title
         cell.cellDesc.text = posts[indexPath.row].text
-        cell.votes.text = "12"
-        
+        cell.time.text = posts[indexPath.row].time
+        cell.user.text = posts[indexPath.row].user
+        let randNum = arc4random_uniform(8000)
+        var doubRandNum = Double(randNum)
+        if randNum > 1000 {
+            doubRandNum /= 1000.0
+            cell.votes.text = String(format: "%.1fk", doubRandNum)
+        } else {
+            cell.votes.text = "\(randNum)"
+        }
         cell.upvotebutton.setImage(UIImage(named: "selectedupvote"), for: .selected)
         cell.downvotebutton.setImage(UIImage(named: "selecteddownvote"), for: .selected)
         return cell
@@ -65,8 +73,9 @@ class TableViewController: UITableViewController {
                 self.posts.removeAll()
                 for entry in json {
                     let entry = entry as! NSDictionary
-                    
-                    let post = Post(title: entry.value(forKey: "title") as! String, text: entry.value(forKey: "text") as! String, user: entry.value(forKey: "user") as! String, time: entry.value(forKey: "time") as! String)
+                    var time = entry.value(forKey: "time") as! String
+                    time.removeLast(7)
+                    let post = Post(title: entry.value(forKey: "title") as! String, text: entry.value(forKey: "text") as! String, user: entry.value(forKey: "user") as! String, time: time)
                     
                     self.posts.append(post)
                 }

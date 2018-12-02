@@ -17,6 +17,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var upvotebutton: UIButton!
     @IBOutlet var downvotebutton: UIButton!
     
+    @IBOutlet weak var user: UILabel!
+    @IBOutlet weak var time: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
