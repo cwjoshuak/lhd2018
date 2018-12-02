@@ -2,9 +2,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 
-target 'Murmur' do
+target 'UCI Confessions' do
     pod 'Alamofire', '~> 4.7'
-    pod 'FacebookCore'
-    pod 'FacebookLogin'
-    pod 'FacebookShare'
 end

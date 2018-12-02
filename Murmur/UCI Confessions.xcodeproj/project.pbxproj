@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D7014DE457C9F080DF88557 /* Pods_Murmur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367B88651CA386A570014F59 /* Pods_Murmur.framework */; };
 		B205214A21B33B9500781268 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205214921B33B9500781268 /* Post.swift */; };
+		C3F4A27887BC970A2AFCDAD9 /* Pods_UCI_Confessions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89185AFF75C8639EA01669BA /* Pods_UCI_Confessions.framework */; };
 		D4E5486021B32056001819C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5485F21B32056001819C4 /* AppDelegate.swift */; };
 		D4E5486521B32056001819C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E5486321B32056001819C4 /* Main.storyboard */; };
 		D4E5486721B32056001819C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E5486621B32056001819C4 /* Assets.xcassets */; };
@@ -21,7 +22,9 @@
 /* Begin PBXFileReference section */
 		06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Murmur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Murmur/Pods-Murmur.release.xcconfig"; sourceTree = "<group>"; };
 		367B88651CA386A570014F59 /* Pods_Murmur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Murmur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C327A6ED46B725DFC6E83A /* Pods-UCI Confessions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCI Confessions.release.xcconfig"; path = "Pods/Target Support Files/Pods-UCI Confessions/Pods-UCI Confessions.release.xcconfig"; sourceTree = "<group>"; };
 		72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Murmur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Murmur/Pods-Murmur.debug.xcconfig"; sourceTree = "<group>"; };
+		89185AFF75C8639EA01669BA /* Pods_UCI_Confessions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UCI_Confessions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B205214921B33B9500781268 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D4E5485C21B32056001819C4 /* UCI Confessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCI Confessions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5485F21B32056001819C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		D4E5487521B3213A001819C4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D4E5487721B3217C001819C4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D4E5487921B33B84001819C4 /* PostViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewViewController.swift; sourceTree = "<group>"; };
+		F65E4D7013761617A7C33642 /* Pods-UCI Confessions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UCI Confessions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UCI Confessions/Pods-UCI Confessions.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D7014DE457C9F080DF88557 /* Pods_Murmur.framework in Frameworks */,
+				C3F4A27887BC970A2AFCDAD9 /* Pods_UCI_Confessions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				367B88651CA386A570014F59 /* Pods_Murmur.framework */,
+				89185AFF75C8639EA01669BA /* Pods_UCI_Confessions.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,6 +99,8 @@
 			children = (
 				72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */,
 				06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */,
+				F65E4D7013761617A7C33642 /* Pods-UCI Confessions.debug.xcconfig */,
+				38C327A6ED46B725DFC6E83A /* Pods-UCI Confessions.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -175,30 +183,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Murmur/Pods-Murmur-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-UCI Confessions/Pods-UCI Confessions-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Murmur/Pods-Murmur-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UCI Confessions/Pods-UCI Confessions-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E755B3420F002E275FD5CEE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -212,7 +206,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Murmur-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-UCI Confessions-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -369,7 +363,7 @@
 		};
 		D4E5486F21B32056001819C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */;
+			baseConfigurationReference = F65E4D7013761617A7C33642 /* Pods-UCI Confessions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YN83627A85;
@@ -384,7 +378,7 @@
 		};
 		D4E5487021B32056001819C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06796628BAA165683B502D6A /* Pods-Murmur.release.xcconfig */;
+			baseConfigurationReference = 38C327A6ED46B725DFC6E83A /* Pods-UCI Confessions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YN83627A85;
