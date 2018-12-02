@@ -30,12 +30,45 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func upvotepress(_ sender: UIButton) {
+        var v = votes.text!
+        v.removeLast(6)
+ 
         if downvotebutton.state != .selected{
+            print(sender.state)
+            if sender.isSelected{
+                if let vote = Int(v) {
+                    votes.text = String(vote-1) + " Zoots"
+                }
+            } else{
+                if let vote = Int(v) {
+                    votes.text = String(vote+1) + " Zoots"
+                }
+            }
+            
             sender.isSelected = !sender.isSelected
         }
+        
     }
     @IBAction func downvotepress(_ sender: UIButton) {
+        var v = votes.text!
+        v.removeLast(6)
+        print("lol")
         if upvotebutton.state != .selected{
+            
+            
+            if sender.isSelected {
+                if let vote = Int(v) {
+                    votes.text = String(vote+1) + " Zoots"
+                }
+            } else {
+                if let vote = Int(v) {
+                    votes.text = String(vote-1) + " Zoots"
+                }
+            }
+            
+            
+            
+            
             sender.isSelected = !sender.isSelected
         }
     }

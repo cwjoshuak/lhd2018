@@ -24,6 +24,8 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.estimatedRowHeight = 88.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         refresh()
     }
 
@@ -53,16 +55,16 @@ class TableViewController: UITableViewController {
         cell.cellDesc.text = posts[indexPath.row].text
         cell.time.text = posts[indexPath.row].time
         cell.user.text = posts[indexPath.row].user
-        let randNum = arc4random_uniform(8000)
+        let randNum = arc4random_uniform(400)
         var doubRandNum = Double(randNum)
         if randNum > 1000 {
             doubRandNum /= 1000.0
-            cell.votes.text = String(format: "%.1fk", doubRandNum)
+            cell.votes.text = String(format: "%.1fk Zoots", doubRandNum)
         } else {
-            cell.votes.text = "\(randNum)"
+            cell.votes.text = "\(randNum) Zoots"
         }
-        cell.upvotebutton.setImage(UIImage(named: "selectedupvote"), for: .selected)
-        cell.downvotebutton.setImage(UIImage(named: "selecteddownvote"), for: .selected)
+        cell.upvotebutton.setImage(UIImage(named: "petr-template-copy"), for: .selected)
+        cell.downvotebutton.setImage(UIImage(named: "petr-template-cry"), for: .selected)
         return cell
     }
     
@@ -85,6 +87,7 @@ class TableViewController: UITableViewController {
     }
     @IBAction func refreshposts(_ sender: UIBarButtonItem) {
         refresh()
+        
     }
 
     /*
@@ -132,4 +135,7 @@ class TableViewController: UITableViewController {
     }
     */
 
+    @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+        refresh()
+    }
 }

@@ -23,7 +23,7 @@
 		367B88651CA386A570014F59 /* Pods_Murmur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Murmur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A0279ECBD86FB3B000979B /* Pods-Murmur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Murmur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Murmur/Pods-Murmur.debug.xcconfig"; sourceTree = "<group>"; };
 		B205214921B33B9500781268 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		D4E5485C21B32056001819C4 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E5485C21B32056001819C4 /* UCI Confessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCI Confessions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E5485F21B32056001819C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E5486421B32056001819C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4E5486621B32056001819C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		D4E5485D21B32056001819C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4E5485C21B32056001819C4 /* Murmur.app */,
+				D4E5485C21B32056001819C4 /* UCI Confessions.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4E5485B21B32056001819C4 /* Murmur */ = {
+		D4E5485B21B32056001819C4 /* UCI Confessions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4E5486E21B32056001819C4 /* Build configuration list for PBXNativeTarget "Murmur" */;
+			buildConfigurationList = D4E5486E21B32056001819C4 /* Build configuration list for PBXNativeTarget "UCI Confessions" */;
 			buildPhases = (
 				E755B3420F002E275FD5CEE0 /* [CP] Check Pods Manifest.lock */,
 				D4E5485821B32056001819C4 /* Sources */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = Murmur;
+			name = "UCI Confessions";
 			productName = Murmur;
-			productReference = D4E5485C21B32056001819C4 /* Murmur.app */;
+			productReference = D4E5485C21B32056001819C4 /* UCI Confessions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D4E5485721B32056001819C4 /* Build configuration list for PBXProject "Murmur" */;
+			buildConfigurationList = D4E5485721B32056001819C4 /* Build configuration list for PBXProject "UCI Confessions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4E5485B21B32056001819C4 /* Murmur */,
+				D4E5485B21B32056001819C4 /* UCI Confessions */,
 			);
 		};
 /* End PBXProject section */
@@ -177,10 +177,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Murmur/Pods-Murmur-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -294,6 +308,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -345,6 +360,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -384,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4E5485721B32056001819C4 /* Build configuration list for PBXProject "Murmur" */ = {
+		D4E5485721B32056001819C4 /* Build configuration list for PBXProject "UCI Confessions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4E5486C21B32056001819C4 /* Debug */,
@@ -393,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4E5486E21B32056001819C4 /* Build configuration list for PBXNativeTarget "Murmur" */ = {
+		D4E5486E21B32056001819C4 /* Build configuration list for PBXNativeTarget "UCI Confessions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4E5486F21B32056001819C4 /* Debug */,

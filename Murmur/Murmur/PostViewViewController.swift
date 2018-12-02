@@ -25,12 +25,13 @@ class PostViewViewController: UIViewController, UIPickerViewDataSource, UIPicker
         super.viewDidLoad()
         self.categorypicker.delegate = self
         self.categorypicker.dataSource = self
-        self.categorytextfield.delegate = self
+        //self.categorytextfield.delegate = self
         categorypicker.isHidden = true;
-        categorytextfield.text = categories[0]
+        //categorytextfield.text = categories[0]
         // Do any additional setup after loading the view.
-
-            }
+        self.postdesc.layer.borderWidth = 0.5
+        self.postdesc.layer.borderColor = CGColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 1)
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
