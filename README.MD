@@ -1,6 +1,6 @@
 # UCI Confessions Mobile App
 
-![](SS1.png)
+<img src="SS1.png" width="200" height="400" />
 
 ## Inspiration
 A social media trend is surging through the campus of UCI known as "UCI Confessions". It is originally a private facebook group where users can anonymously share their deepest thoughts and secrets to the members of the group. We wanted to create a mobile application for "UCI Confessions", instead of it being a facebook page
